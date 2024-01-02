@@ -1,0 +1,8 @@
+https://www.youtube.com/watch?v=DA61DY9Dtdg
+
+
+https://github.com/jeroennoten/Laravel-AdminLTE/wiki/Installation
+
+https://github.com/aslan-asilon31/nexus_laravel10.git
+
+https://medium.com/@mark.tabletpc/set-up-laravel-with-swagger-for-comprehensive-api-documentation-step-by-step-instructions-d30552ca8051
