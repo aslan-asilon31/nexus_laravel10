@@ -477,15 +477,15 @@ return [
                 ],
                 [
                     'text' => 'Saldo Awal',
-                    'url'  => '#',
+                    'url'  => 'accounting/opening-balance',
                 ],
                 [
                     'text' => 'Jurnal Umum',
-                    'url'  => '#',
+                    'url'  => 'accounting/gen-journal',
                 ],
                 [
                     'text' => 'Jurnal Penyesuaian',
-                    'url'  => '#',
+                    'url'  => 'accounting/adj-entry',
                 ],
                 [
                     'text' => 'Jurnal Pelunasan',
@@ -493,7 +493,7 @@ return [
                 ],
                 [
                     'text' => 'Buku Besar',
-                    'url'  => '#',
+                    'url'  => 'accounting/gen-ledger',
                 ],
                 [
                     'text' => 'Laporan',

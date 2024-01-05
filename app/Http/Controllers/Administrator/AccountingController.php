@@ -4,60 +4,77 @@ namespace App\Http\Controllers\Administrator;
 
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
+use App\Models\OpeningBalance;
 
 class AccountingController extends Controller
 {
-    /**
-     * Display a listing of the resource.
-     */
+
     public function index()
     {
-        //
+        return view('administrator/accounting/gen_journal');
+    }
+    
+
+    public function adj_entry()
+    {
+        return view('administrator/accounting/adj_entry');
     }
 
-    /**
-     * Show the form for creating a new resource.
-     */
+    public function balance_sheet()
+    {
+        return view('administrator/accounting/balance_sheet');
+    }
+    
+    public function dash_report_account()
+    {
+        return view('administrator\accounting\dash_report_account');
+        
+    } 
+    
+    public function gen_journal()
+    {
+        return view('administrator\accounting\gen_journal');
+    } 
+    
+    public function gen_legder()
+    {
+        return view('administrator\accounting\gen_ledger');
+    } 
+    
+    public function opening_balance()
+    {
+        $open_balances = OpeningBalance::all();
+        // dd($open_balances);
+        return view('administrator\accounting\opening_balance', compact('open_balances'));
+    } 
+
     public function create()
     {
         //
     }
 
-    /**
-     * Store a newly created resource in storage.
-     */
+
     public function store(Request $request)
     {
         //
     }
 
-    /**
-     * Display the specified resource.
-     */
+
     public function show(string $id)
     {
         //
     }
 
-    /**
-     * Show the form for editing the specified resource.
-     */
     public function edit(string $id)
     {
         //
     }
 
-    /**
-     * Update the specified resource in storage.
-     */
     public function update(Request $request, string $id)
     {
         //
     }
 
-    /**
-     * Remove the specified resource from storage.
-     */
     public function destroy(string $id)
     {
         //
