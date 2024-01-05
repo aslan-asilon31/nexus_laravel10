@@ -55,9 +55,9 @@
             <thead>
                 <tr>
                     <th>No</th>
-                    <th>Account Name</th>
-                    <th>Initial Debit Balance</th>
-                    <th>Initial credit balance</th>
+                    <th>Nama Akun</th>
+                    <th>Saldo Awal Debet</th>
+                    <th>Saldo Awal Kredit</th>
                 </tr>
             </thead>
             <tbody>

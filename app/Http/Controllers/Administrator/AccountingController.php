@@ -5,6 +5,7 @@ namespace App\Http\Controllers\Administrator;
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 use App\Models\OpeningBalance;
+use App\Models\GeneralJournal;
 
 class AccountingController extends Controller
 {
@@ -33,7 +34,16 @@ class AccountingController extends Controller
     
     public function gen_journal()
     {
-        return view('administrator\accounting\gen_journal');
+        // $general_journals = GeneralJournal::all();
+        $general_journal_codes = GeneralJournal::select('jou_code');
+        // dd($general_journal_codes);
+        $general_journals = GeneralJournal::select('jou_details.*', 'account_journal.*', 'chart_of_account.*')
+        ->leftJoin('account_journal', 'account_journal.jou_id', '=', 'jou_details.jou_id')
+        ->leftJoin('chart_of_account', 'chart_of_account.coa_id', '=', 'jou_details.coa_id')
+        ->get();
+
+
+        return view('administrator\accounting\gen_journal', compact('general_journals'));
     } 
     
     public function gen_legder()
